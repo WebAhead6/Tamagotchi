@@ -1,4 +1,4 @@
-import { token } from "../token";
+const token = process.env.REACT_APP_API_KEY;
 
 const checkResponse = (response) => {
   if (response.status !== 200) {
