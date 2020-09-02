@@ -1,9 +1,17 @@
 import React from "react";
 import "./App.css";
 
-const userImage = ({ imgeSrc, name, number, setNumber }) => (
+const userImage = ({
+  imgeSrc,
+  name,
+  number,
+  setNumber,
+  setHideUserInput,
+  setUserData,
+  setName,
+}) => (
   <div>
-    {name ? (
+    {imgeSrc ? (
       <output>
         {number > 0 ? (
           <img className="userImage" src={imgeSrc} />
@@ -18,6 +26,18 @@ const userImage = ({ imgeSrc, name, number, setNumber }) => (
                 }}
               >
                 try again
+              </button>
+            </div>
+            <div>
+              <button
+                className="Change-user"
+                onClick={() => {
+                  setHideUserInput(false);
+                  setName("");
+                  setUserData({});
+                }}
+              >
+                Change user
               </button>
             </div>
           </div>

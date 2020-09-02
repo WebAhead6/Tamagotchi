@@ -59,7 +59,8 @@
   box-shadow: 0 9px #999;
 }
 .btn-tryAgain,
-.EnterBtn {
+.EnterBtn,
+.Change-user {
   padding: 15px 25px;
   font-size: 20px;
   margin: 10px;

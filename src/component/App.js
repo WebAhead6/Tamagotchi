@@ -31,6 +31,7 @@ function App() {
       .then((data) => {
         setUserData(data);
         setHideUserInput(true);
+        setNumber(5);
       })
       .catch(console.error);
   };
@@ -54,8 +55,12 @@ function App() {
         className="image"
         imgeSrc={avatar_url}
         name={name}
+        setUserData={setUserData}
         number={number}
         setNumber={setNumber}
+        setName={setName}
+        hideUserInput={hideUserInput}
+        setHideUserInput={setHideUserInput}
       />
       {avatar_url ? <Level number={number} /> : ""}
       {avatar_url && number > 0 ? (
